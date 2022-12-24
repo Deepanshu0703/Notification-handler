@@ -1,0 +1,77 @@
+
+body{
+    background-color: hsl(210, 60%, 98%);
+    line-height: 1.5rem;
+}
+
+.container{
+    background-color:hsl(0, 0%, 100%);
+    width:50%;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.btn{
+    background-color:hsl(219, 85%, 26%);
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    width:6%;
+    height: auto;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+img{
+    width:fit-content;
+}
+
+.header{
+    display:grid;
+    grid-template-columns: 2.5fr 1.5fr;
+}
+.mark{
+    justify-self: end;
+    align-self:end;
+}
+.infor{
+    display: grid;
+    row-gap: 1em;
+}
+.info{
+    display:flex;
+    row-gap: 3em;
+}
+.mes{
+    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.message{
+    display :flex;
+    width:72%;
+    justify-items: end;
+    margin-left:18%;
+    margin-top: 0px;
+    /* margin-left: 100px; */
+    padding: 10px;
+    border-radius: 10px;
+    border: 0.1px solid black;
+}
+
+strong:hover{
+    color: hsl(219, 85%, 26%);
+}
+
+.on{
+    background-color: hsl(205, 33%, 90%);
+    border-radius: 10px;
+}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification page</title>
+    <link favicon="images\favicon-32x320.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Plus Jakarta Sans';
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="noti" style="font-size: 25px;">Notification<span><button class="btn"></button></span></div>
+            <div class="mark">Mark all as read</div>
+        </div>
+        <br>
+        <div class="infor">
+        <div class="info on" onclick="ondel.call(this)"> 
+            <img class="image" src="assets\images\avatar-mark-webber.webp">
+            <div class="mes">
+            <div class="mess"><strong>Mark Webber </strong>reacted to your recent post <strong>My first tournament today! </strong><span class="dot">&#128308</span></div>
+            <div class="time">1m ago</div></div>
+        </div>
+        <div class="info on" onclick="ondel.call(this)">
+            <img class="image" src="assets\images\avatar-angela-gray.webp">
+            <div class="mes"><div class="mess"><strong>Angela gray </strong> Followed You <span class="dot">&#128308</span></div>
+            <div class="time">5m ago </div></div>
+        </div>
+        <div class="info on" onclick="ondel.call(this)">
+            <img class="image" src="assets\images\avatar-jacob-thompson.webp">
+            <div class="mes"><div class="mess"><strong>Jacob Thompson </strong>has joined your  <strong>Chess Club </strong><span class="dot">&#128308</span></div>
+            <div class="time">1day ago</div></div>
+        </div>
+        <div class="info" onclick="ondel.call(this)">
+            <img class="image" src="assets\images\avatar-rizky-hasanuddin.webp">
+            <div class="mes"><div class="mess"><strong>Rizky Hasanuddin </strong>sent you a private message</div>
+            <div class="time">5days ago</div></div>
+            
+        </div>
+        <div class="message" style="background-color: hsl(205, 33%, 90%);">Hello,thanks for setting up the chess club. I've been a member for a few weeks now and i'm already having lots of fun and improving my game. </div>
+        <div class="info" onclick="ondel.call(this)">
+            <img class="image" src="assets\images\avatar-kimberly-smith.webp">
+            <div class="mes"><div class="mess"><strong>Kimberly Smith</strong>commented on your picture</div>
+            <div class="time">1week ago</div></div>
+        </div>
+        <div class="info" onclick="ondel.call(this)">
+            <img class="image" src="assets\images\avatar-nathan-peterson.webp">
+            <div class="mes"><div class="mess"><strong>Nathan Peterson </strong>reacted to your recent post </div>
+            <div class="time">2weeks ago</div></div>
+        </div>
+        <div class="info" onclick="ondel.call(this)">
+            <img class="image" src="assets\images\avatar-anna-kim.webp">
+            <div class="mes"><div class="mess"><strong>Anna Kim</strong>left the group <strong>Chess Club </strong></div>
+            <div class="time">2weeks ago</div></div>
+        </div>
+    </div>
+    </div>
+    <script>
+        let cos=document.querySelectorAll(".on")
+        
+        let btn=document.querySelector(".btn")
+        btn.innerHTML=cos.length
+        var x=btn.innerHTML
+
+        function ondel(){
+            if(this.classList.contains("on")){
+                this.classList.remove("on")
+                var c=this.querySelector(".dot")
+                c.style.display='none'
+                if(x>0){
+                    x--
+                }
+                btn.innerHTML=x
+            }
+        }
+        let mark=document.querySelector(".mark")
+        mark.addEventListener("click",()=>{
+            cos.forEach((e)=>{
+                e.classList.remove("on")
+            })
+            btn.innerHTML=0
+        })
+    </script>
+    
+</body>
+</html>
